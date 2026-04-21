@@ -117,9 +117,9 @@ export default function App() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="absolute top-full left-0 right-0 mt-2 p-4 md:hidden"
+              className="absolute top-full left-0 right-0 mt-2 p-2 md:hidden"
             >
-              <div className="glass rounded-2xl border border-white/[0.08] shadow-2xl p-6 flex flex-col gap-6">
+              <div className="bg-dark rounded-2xl border border-white/[0.12] shadow-[0_20px_50px_rgba(0,0,0,0.5)] p-6 flex flex-col gap-6">
                 {navLinks.map((link) => (
                   <a
                     key={link.name}
@@ -278,14 +278,14 @@ export default function App() {
                 <ArrowRight className="w-6 h-6 text-gold/40 group-hover:text-gold transition-colors" />
               </a>
 
-              <a href="mailto:info@ebwebdesign.se" className="bg-dark p-12 flex items-center justify-between group hover:bg-white/[0.02] transition-colors">
+              <a href="mailto:eb.webdesign@outlook.com" className="bg-dark p-12 flex items-center justify-between group hover:bg-white/[0.02] transition-colors">
                 <div className="flex items-center gap-6">
                   <div className="w-12 h-12 border border-gold/20 flex items-center justify-center text-gold">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
                     <p className="text-[10px] uppercase font-bold text-muted tracking-widest mb-1">E-posta oss</p>
-                    <p className="font-medium text-lg tracking-tight">info@ebwebdesign.se</p>
+                    <p className="font-medium text-lg tracking-tight">eb.webdesign@outlook.com</p>
                   </div>
                 </div>
                 <ArrowRight className="w-6 h-6 text-gold/40 group-hover:text-gold transition-colors" />
