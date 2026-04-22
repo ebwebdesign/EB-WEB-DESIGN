@@ -1,13 +1,233 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EB WEB DESIGN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top, rgba(180, 140, 40, 0.08), transparent 30%),
+        linear-gradient(180deg, #050608 0%, #050608 100%);
+      color: #f4f1ea;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 22px 18px 40px;
+    }
+
+    .nav-wrap {
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 26px;
+      padding: 18px 16px;
+      background: rgba(7, 8, 10, 0.85);
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.02) inset;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .logo-box {
+      width: 64px;
+      height: 64px;
+      border: 2px solid #caa24a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #caa24a;
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      font-size: 18px;
+      letter-spacing: 0.22em;
+      font-weight: 700;
+      color: #f8f6f1;
+      line-height: 1.2;
+    }
+
+    .brand-text span {
+      color: #caa24a;
+    }
+
+    .menu {
+      width: 46px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 34px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .hero {
+      padding-top: 46px;
+      text-align: center;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid rgba(202,162,74,0.6);
+      color: #d3ad57;
+      padding: 12px 18px;
+      min-height: 46px;
+      min-width: 280px;
+      max-width: 100%;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    .title {
+      margin: 34px 0 0;
+      font-size: 86px;
+      line-height: 0.94;
+      font-weight: 300;
+      color: #f4f1ea;
+      letter-spacing: -0.04em;
+    }
+
+    .title .gold {
+      display: block;
+      margin-top: 18px;
+      font-family: 'Cormorant Garamond', serif;
+      color: #caa24a;
+      font-weight: 500;
+      font-style: italic;
+      letter-spacing: -0.03em;
+    }
+
+    .desc {
+      max-width: 720px;
+      margin: 44px auto 0;
+      color: rgba(244,241,234,0.75);
+      font-size: 18px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 52px;
+      min-width: 250px;
+      min-height: 74px;
+      padding: 20px 28px;
+      background: linear-gradient(180deg, #e2c173 0%, #caa24a 100%);
+      color: #0a0b0d;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+
+    .cta:active {
+      transform: scale(0.98);
+    }
+
+    .footer-space {
+      height: 60px;
+    }
+
+    @media (max-width: 420px) {
+      .page {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      .logo-box {
+        width: 56px;
+        height: 56px;
+        font-size: 24px;
+      }
+
+      .brand-text {
+        font-size: 16px;
+      }
+
+      .title {
+        font-size: 72px;
+      }
+
+      .desc {
+        font-size: 17px;
+      }
+
+      .cta {
+        min-width: 220px;
+        min-height: 68px;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="nav-wrap">
+      <div class="nav">
+        <div class="brand">
+          <div class="logo-box">✦</div>
+          <div class="brand-text">EB <span>WEB DESIGN</span></div>
+        </div>
+        <div class="menu">☰</div>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="pill">✦ Snabb leverans (1-2 dagar)</div>
+
+      <h1 class="title">
+        Vi skapar
+        <span class="gold">digitala<br>avtryck.</span>
+      </h1>
+
+      <p class="desc">
+        Webblösningar för visionära företag. Minimalism möter funktion i varje pixel –
+        tillgängligt för kunder i hela landet, helt på distans.
+      </p>
+
+      <a class="cta" href="mailto:dinmail@exempel.se">Kontakta oss</a>
+    </section>
+
+    <div class="footer-space"></div>
+  </div>
+</body>
+</html>
